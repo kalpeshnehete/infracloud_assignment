@@ -1,5 +1,8 @@
 # infracloud_assignment
 
+Technologies used : Python , Django Framework . To check the result use POSTMAN
+
+
 1] Using the githublink . clone the repositiory. 
 
 2] Open the cmd and cd into the directory having manage.py file of the project
