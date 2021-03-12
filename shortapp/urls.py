@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name="Home"),
     path('shorten',views.short_url,name='ShortUrl'),
+    path('allurl/',views.all),
     path('<str:hash_id>/',views.redirector,name="Redirector"),
 ]

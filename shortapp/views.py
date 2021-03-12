@@ -13,6 +13,9 @@ import string,random
 def home(request):
     current_site = get_current_site(request)
     return HttpResponse("<center><h1>Url Shortner<br>Please got to local:8000/shorten to shorten your url</h1></center>")
+def all(request):
+    allurl=URL.objects.all().values('full_url','hash')
+    return JsonResponse({"allurl":list(allurl)})
 
 
 
@@ -21,7 +24,8 @@ def home(request):
 def short_url(request):
     long_url = request.POST.get("url")
     if URL.objects.filter(full_url=long_url).exists():
-        return JsonResponse({"success": False})
+        existing_url=URL.objects.filter(full_url=long_url).values('full_url','hash')
+        return JsonResponse({"success": False,"existing_url":list(existing_url)})
     else:
         hash = shortit(long_url)
         current_site = get_current_site(request)
@@ -49,7 +53,6 @@ def redirector(request,hash_id=None):
         return HttpResponse("<h6>Invalid </h6>")
     if URL.objects.filter(hash=hash_id).exists():
         url=URL.objects.get(hash=hash_id)
-        rds.set(hash_id,url.full_url)
         return redirect(url.full_url)
     else:
         return JsonResponse({"success":False})
