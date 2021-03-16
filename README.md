@@ -9,7 +9,7 @@ Technologies used : Python , Django Framework . To check the result use POSTMAN
 
 3] Create a virtual environment and activate it .
 
-4] Run the command > pip install requirements.txt #This will install all the dependancies required for the project.
+4] Run the command > pip install requirements.txt #This will install all the dependancies required for the project. Now run the command < manage.py runserver >
 
 5] Once the server is running .Open Postman to send request to the server.
 
@@ -27,3 +27,13 @@ URLS : 1] POST = localhost:8000/shorten      # To shorten url
        2] GET = localhost:8000/<shorturl>    # To open shortened url
        3] GET = localhost:8000/allurl        # To get all urls 
        4] GET = localhost:8000               # Homepage
+
+
+-----OR-----
+If you have docker installed : 
+
+1] Clone the repository and cd into the directory of docker-compose 
+
+2] Run the command < docker-compose build >
+
+3] Run < docker-compose up >
