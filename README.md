@@ -24,7 +24,7 @@ Technologies used : Python , Django Framework . To check the result use POSTMAN
 
 
 URLS : 1] POST = localhost:8000/shorten      # To shorten url
-       2] GET = localhost:8000/<shorturl>    # To open shortened url
+       2] GET = localhost:8000/< shorturl >    # To open shortened url
        3] GET = localhost:8000/allurl        # To get all urls 
        4] GET = localhost:8000               # Homepage
 
