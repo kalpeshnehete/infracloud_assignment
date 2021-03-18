@@ -2,6 +2,8 @@
 
 Technologies used : Python , Django Framework 
 
+Delete any existing repo if present and clone the latest .
+
 URLS :
 
        1] POST = localhost:8000/shorten      # To shorten url
@@ -14,7 +16,7 @@ URLS :
 
 
 
-If you have dont have docker installed.  Please Install Docker and Docker-Compose on you machine : 
+If you have dont have Docker installed.  Please Install Docker and Docker-Compose on you machine : 
 
 Step -1] Clone the repository and cd into the directory having docker-compose file
 
@@ -40,12 +42,14 @@ Step -6] You will get the shortened url of 7characters in JsonResponse format.
 
 Step -7] Now if you again create POST request using the same LONG URL which you ented earlier .If the url already exists then it will return you the SHORT URL which was created earlier for the existing LONG URL .
 
-Step -8] Now if you to want to check the shortened url . Open your browser and use https://127.0.0.1:8000/<shortenedurl>
+Step -8] Now if you to want to check the shortened url . Open your browser and use http://127.0.0.1:8000/<shortenedurl>
 Example : 
          If your long url is : http://youtube.com 
          You will get a shortened url of 7characters : ab3q563 
-         To test the shortened url , Open the browser and Enter url in given format: https://127.0.0.1:8000/ab3q563 
+         To test the shortened url , Open the browser and Enter url in given format: http://127.0.0.1:8000/ab3q563 
          You will be redirected to your long url : http://youtube.com  
+
+Step -9] In your browser type the address : http://127.0.0.1:8000/allurl
 
 
 
