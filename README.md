@@ -2,7 +2,9 @@
 
 Technologies used : Python , Django Framework 
 
-URLS : 1] POST = localhost:8000/shorten      # To shorten url
+URLS :
+
+       1] POST = localhost:8000/shorten      # To shorten url
 
        2] GET = localhost:8000/< shorturl >    # To open shortened url
        
