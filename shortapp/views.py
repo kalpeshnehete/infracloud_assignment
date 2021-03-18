@@ -13,9 +13,19 @@ import string,random
 def home(request):
     current_site = get_current_site(request)
     return HttpResponse("<center><h1>Url Shortner<br>Please got to local:8000/shorten to shorten your url</h1></center>")
+
 def all(request):
-    allurl=URL.objects.all().values('full_url','hash')
-    return JsonResponse({"allurl":list(allurl)})
+    allhash = URL.objects.all()
+    keys=[]
+    values=[]
+    for d in allhash:
+        keys.append(d.full_url)
+    for d2 in allhash:
+        values.append(d2.hash)
+    dictionary = dict(zip(keys, values))
+    print(dictionary)
+    return JsonResponse({"success":True,"dictionary":dictionary})
+    
 
 
 
