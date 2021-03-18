@@ -2,10 +2,6 @@
 
 Technologies used : Python , Django Framework 
 
-
-7] Now make a get request to the shortened url . Create GET request > Enter the url (Example : localhost:8000/<shortenedurl> ) and SEND . Select Preview below and you will be redirected to the long url which you entered . 
-
-
 URLS : 1] POST = localhost:8000/shorten      # To shorten url
        2] GET = localhost:8000/< shorturl >    # To open shortened url
        3] GET = localhost:8000/allurl        # To get all urls 
