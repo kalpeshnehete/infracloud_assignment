@@ -3,28 +3,31 @@
 Technologies used : Python , Django Framework 
 
 URLS : 1] POST = localhost:8000/shorten      # To shorten url
+
        2] GET = localhost:8000/< shorturl >    # To open shortened url
+       
        3] GET = localhost:8000/allurl        # To get all urls 
+       
        4] GET = localhost:8000               # Homepage
 
 
 
-If you have dont have docker installed.  Please Install Docker and Docker-Compose : 
+If you have dont have docker installed.  Please Install Docker and Docker-Compose on you machine : 
 
-Step -1] Clone the repository and cd into the directory of docker-compose 
+Step -1] Clone the repository and cd into the directory having docker-compose file
 
 Step -2] Run the command :    docker-compose build 
 
 Step -3] Run the command :    docker-compose up 
 
-Step -4] Once the server is running .Open Postman to send request to the server.
+Step -4] Once the server is running . Open POSTMAN to send request to the server.
 
 Step -5] To create a POST request : 
 
------ If you are using POSTMAN .
+----- If you are using POSTMAN ------
 Create a POST request to the url > localhost:8000/shorten > Below select body > form-data > Enter the key as "url" and enter value as < the url you want to short > and SEND.
 
------ If you dont have POSTMAN use the below format . Send the curl request in the below format .
+----- If you dont have POSTMAN ------Send the curl request in the below format .
 
 curl -X POST http://127.0.0.1:8000/shorten -d "url=test198903/abcd" -H "Content-Type= application/json"
 
