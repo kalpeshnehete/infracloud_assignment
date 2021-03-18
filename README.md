@@ -31,7 +31,10 @@ Create a POST request to the url > localhost:8000/shorten > Below select body > 
 
 ----- If you dont have POSTMAN ------Send the curl request in the below format .
 
+
 curl -X POST http://127.0.0.1:8000/shorten -d "url=test198903/abcd" -H "Content-Type= application/json"
+
+
 
 Step -6] You will get the shortened url of 7characters in JsonResponse format.
 
